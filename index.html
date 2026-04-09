@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>絆建装 株式会社</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DIN+Alternate:wght@700&display=swap');
+:root{--c-gold:#D4AF37;--c-black:#0A0A0A}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--c-black);margin:0;padding-top:80px}
+.font-serif{font-family:'Shippori Mincho',serif}
+.nav-link{position:relative;transition:.3s;font-size:11px;font-weight:900;letter-spacing:.15em;color:rgba(255,255,255,.7);text-decoration:none}
+.nav-link:after{content:'';position:absolute;width:0;height:1px;bottom:-4px;left:0;background:var(--c-gold);transition:.3s}
+.nav-link:hover:after{width:100%}.nav-link:hover{color:var(--c-gold)}
+.btn-contact{display:flex;align-items:center;justify-content:center;background:var(--c-gold);color:#0A0A0A;padding:.5rem 1rem;border-radius:9999px;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;position:relative;overflow:hidden;transition:.25s;box-shadow:0 2px 8px rgba(220,176,55,.08)}
+@media(min-width:768px){.btn-contact{padding:.625rem 1.5rem;font-size:10px}}
+.btn-contact:before{content:'';position:absolute;left:-50%;top:-50%;width:200%;height:200%;background:conic-gradient(from 90deg,#FFFCE1 0%,#FFE588 20%,#D4AF37 60%,#b8962c 100%);opacity:0;z-index:0;transition:.4s}
+.btn-contact:hover:before,.btn-contact:focus:before{opacity:.13}
+.btn-contact span{position:relative;z-index:1;color:#fff!important;background:none!important;-webkit-background-clip:unset!important;-webkit-text-fill-color:unset!important;background-clip:unset!important;transition:none!important}
+.btn-contact:hover,.btn-contact:focus{background:#b8962c;color:#fff;box-shadow:0 6px 24px rgba(212,175,55,.23),0 1.5px 18px #D4AF37;transform:translateY(-2px) scale(1.054)}
+.arial-numbers{font-family:'DIN Alternate',Arial,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0.02em}
+</style>
+</head>
+<body>
+
+<header class="fixed top-0 left-0 w-full z-[99999] bg-black/95 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a href="#hero" class="scroll-link flex items-center gap-3 no-underline">
+<div class="w-10 h-10 bg-[#D4AF37] flex items-center justify-center rounded shadow-lg">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq151zGq7/s-788x777_v-fs_webp_808962f8-5031-461e-a87a-d2a03076052f.png" class="w-8 h-8 object-contain">
+</div>
+<div class="hidden sm:block leading-none">
+<h1 class="text-white font-serif font-bold text-lg m-0">絆建装 株式会社</h1>
+<p class="text-[8px] text-[#D4AF37] tracking-[0.2em] uppercase mt-1">Kizuna Kenso Inc.</p>
+</div>
+</a>
+<div class="flex items-center gap-3">
+<nav class="hidden md:flex items-center gap-8">
+<a href="#greeting" class="scroll-link nav-link">代表挨拶</a>
+<a href="#services" class="scroll-link nav-link">工事内容</a>
+<a href="#works"    class="scroll-link nav-link">施工事例</a>
+<a href="#company"  class="scroll-link nav-link">会社概要</a>
+</nav>
+<a href="#contact" class="scroll-link btn-contact"><span>お問い合わせ</span></a>
+<button id="menuBtn" class="ml-1 text-white md:hidden flex items-center justify-center">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/6kq9eD6Lqp/s-1195x896_v-fs_webp_f5b80c71-3a45-4c83-8a25-5042f007df93.png" class="w-6 h-6" id="customMenuBtnImg">
+</button>
+</div>
+</div>
+</header>
+<div id="customMenuWindow" class="fixed inset-0 z-[99999] hidden items-center justify-center">
+<div class="absolute inset-0"></div>
+<div class="relative mx-auto w-[90vw] max-w-xs bg-[#181616] border-2 border-[#D4AF37] rounded-2xl shadow-2xl flex flex-col text-center py-10 px-6 gap-6 animate-fade-in"
+style="z-index:100000;">
+<a href="#greeting" class="scroll-link nav-link !text-white text-lg !font-serif !font-bold !no-underline py-2" onclick="toggleCustomMenuWindow()">代表挨拶</a>
+<a href="#services" class="scroll-link nav-link !text-white text-lg !font-serif !font-bold !no-underline py-2" onclick="toggleCustomMenuWindow()">工事内容</a>
+<a href="#works" class="scroll-link nav-link !text-white text-lg !font-serif !font-bold !no-underline py-2" onclick="toggleCustomMenuWindow()">施工事例</a>
+<a href="#company" class="scroll-link nav-link !text-white text-lg !font-serif !font-bold !no-underline py-2" onclick="toggleCustomMenuWindow()">会社概要</a>
+</div>
+</div>
+<style>
+@keyframes fade-in {
+0%{ opacity:0; transform: scale(0.96);}
+100%{ opacity:1; transform: scale(1);}
+}
+.animate-fade-in {
+animation: fade-in .18s;
+}
+</style>
+
+<div id="mobileMenu" class="fixed inset-0 bg-black/95 z-[9998] hidden flex-col items-center justify-center gap-10 text-white text-lg">
+<a href="#greeting" class="scroll-link nav-link" onclick="toggleMenu()">代表挨拶</a>
+<a href="#services"  class="scroll-link nav-link" onclick="toggleMenu()">工事内容</a>
+<a href="#works"     class="scroll-link nav-link" onclick="toggleMenu()">施工事例</a>
+<a href="#company"   class="scroll-link nav-link" onclick="toggleMenu()">会社概要</a>
+</div>
+
+<section id="hero" class="relative flex items-center pt-20 overflow-hidden bg-black scroll-mt-20 min-h-[600px] md:min-h-[650px] lg:min-h-[720px]">
+<div class="absolute inset-0 z-0 pointer-events-none">
+<img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover opacity-40">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-20 w-full max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-40 items-center">
+<div class="space-y-6 lg:pl-10">
+<div class="flex items-center gap-4 mb-4">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq151zGq7/s-788x777_v-fs_webp_808962f8-5031-461e-a87a-d2a03076052f.png" class="w-14 h-14 object-contain bg-[#D4AF37] rounded shadow-xl p-1">
+<p class="text-white font-serif text-2xl tracking-[0.2em]">絆建装 株式会社</p>
+</div>
+<h2 class="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight tracking-tighter">一切の妥協を<br><span class="text-[#D4AF37]">許さない施工</span></h2>
+</div>
+<div class="lg:border-l lg:border-white/10 lg:pl-16 space-y-8">
+<p class="text-2xl lg:text-3xl text-white font-serif leading-relaxed">総合リフォームのことなら<br><span class="text-[#D4AF37] relative inline-block font-bold">絆建装へ<span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#D4AF37]"></span></span></p>
+<div class="inline-flex items-center gap-4 text-[#D4AF37] bg-white/5 border border-[#D4AF37]/30 px-6 py-4 rounded-sm backdrop-blur-md shadow-lg">
+<p class="font-bold tracking-[0.1em] text-sm lg:text-base whitespace-nowrap">営業時間：9:00～19:00（日・祝を除く）</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-[#111111] border-y border-[#D4AF37]/20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h3 class="text-3xl md:text-4xl font-serif font-bold text-white tracking-widest"><span class="text-[#D4AF37]">責任者自ら</span>がお見積り</h3>
+<p class="text-gray-400">現地調査、お見積から工事終了まで責任をもって施工いたします。<br>一切の妥協を許さず地域No.1を目指します。</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 md:gap-8 justify-items-center mb-8">
+<div class="bg-black/40 border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-xl w-full max-w-sm">
+<div class="text-[#D4AF37] mb-4 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+<p class="text-xs text-gray-400 font-bold mb-1 tracking-tighter">塗料のご提案</p>
+<p class="text-lg font-black text-white font-serif">用途に応じた<br><span class="text-[#D4AF37]">最適な塗料</span></p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="bg-black/40 border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-xl">
+<div class="text-[#D4AF37] mb-4 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+<p class="text-xs text-gray-400 font-bold mb-1 tracking-tighter">安心の長期保証</p>
+<p class="text-lg font-black text-white font-serif">最長<span class="text-[#D4AF37] arial-numbers"><span>1</span><span>5</span></span>年</p>
+</div>
+<div class="bg-black/40 border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-xl">
+<div class="text-[#D4AF37] mb-4 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+<p class="text-xs text-gray-400 font-bold mb-1 tracking-tighter">自社施工</p>
+<p class="text-lg font-black text-white font-serif">実現する<br><span class="text-[#D4AF37]">低価格</span></p>
+</div>
+<div class="bg-black/40 border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-xl">
+<div class="text-[#D4AF37] mb-4 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+<p class="text-xs text-gray-400 font-bold mb-1 tracking-tighter">顧客ファースト</p>
+<p class="text-lg font-black text-white font-serif">押し売り販売<br><span class="text-[#D4AF37]">一切なし</span></p>
+</div>
+<div class="bg-black/40 border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-xl">
+<div class="text-[#D4AF37] mb-4 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+<p class="text-xs text-gray-400 font-bold mb-1 tracking-tighter">対応地域</p>
+<p class="text-lg font-black text-white font-serif"><span class="text-[#D4AF37]">近畿<span class="arial-numbers"><span>2</span></span>府<span class="arial-numbers"><span>4</span></span>県</span><br>対応可能</p>
+</div>
+</div>
+<div class="mt-16 bg-black/90 p-6 md:p-8 text-center rounded-3xl border border-[#D4AF37]/50 shadow-[0_0_50px_rgba(212,175,55,0.1)] max-w-md mx-auto">
+<p class="text-white text-sm md:text-base mb-2 md:mb-4">点検・調査・お見積りなど無料で承ります。</p>
+<p class="text-[#D4AF37] text-[10px] font-black tracking-widest mb-1 md:mb-2">【お電話でのお問い合わせ】</p>
+<a href="tel:0665860266" class="text-2xl md:text-4xl font-serif font-bold text-white no-underline hover:text-[#D4AF37] transition-colors tabular-nums"><span class="arial-numbers">06-6586-0266</span></a>
+</div>
+</div>
+</section>
+
+<section id="greeting" class="py-20 bg-[#0A0A0A] scroll-mt-20">
+<div class="max-w-4xl mx-auto px-4 relative">
+<div class="hidden md:block absolute right-0 bottom-0 z-10">
+<div class="relative">
+<div class="aspect-[3/4] w-44 md:w-56 overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale">
+</div>
+<div class="absolute right-2 bottom-2 bg-[#D4AF37] text-black px-6 py-4 rounded-xl font-serif text-2xl md:text-3xl font-bold shadow-2xl whitespace-nowrap">前田 洋</div>
+</div>
+</div>
+<div class="block md:hidden flex justify-center mb-8">
+<div class="relative">
+<div class="aspect-[3/4] w-36 overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale">
+</div>
+<div class="absolute right-2 bottom-2 bg-[#D4AF37] text-black px-6 py-3 rounded-xl font-serif text-2xl font-bold shadow-2xl whitespace-nowrap">前田 洋</div>
+</div>
+</div>
+<div class="w-full relative z-20 md:pr-64 space-y-7 md:space-y-8 text-left">
+<h2 class="text-3xl md:text-4xl font-serif font-bold text-white leading-tight">住まいに、<br><span class="text-[#D4AF37]">一生モノの安心と絆を。</span></h2>
+<div class="text-gray-400 space-y-5 text-sm md:text-base leading-relaxed font-light">
+<p>はじめまして。絆建装株式会社 代表の前田 洋です。絆建装という社名には、会社を立ち上げた仲間との絆、職人との絆、そしてお客様との絆を大切にしたいという想いを込めています。</p>
+<p>私はこれまで約20年間、営業の仕事に携わってきました。人と人との信頼関係で仕事が成り立つことを、この20年間で強く実感しております。</p>
+<p>現在、絆建装で施工を担当している塗装職人は私の同級生です。以前から「いつか一緒に仕事ができれば」と話していましたが、彼には長年培ってきた職人としての技術があり、私は営業としての経験があります。それならば、お互いの強みを活かして、お客様に本当に喜んでいただける仕事ができるのではないかと考え、絆建装を立ち上げました。</p>
+<p>私は塗装営業の会社で約6年半、現場や塗料、施工について学びながら経験を積んできました。しかしその一方で、業界には強引な営業や、お客様のことを十分に考えていない提案があるのも事実です。だからこそ私は、無理な営業は絶対にしないと決めています。</p>
+<p>その経験を活かし、営業と職人が連携しながらお客様にとって最適なご提案を心掛けています。また、職人が現地確認やお打ち合わせに同行することで、より正確で安心できるご提案を行っています。</p>
+<p>住宅の状態やライフプランによって、最適な塗料や工事内容は変わります。私たちは高価なものを勧めるのではなく、お住まいに合ったご提案を大切にしています。</p>
+<p>また、絆建装では、外壁塗装・屋根塗装をはじめ、給湯器交換や水回りリフォームにも対応しております。そして何より大切にしているのは「一切の妥協を許さない施工」です。</p>
+<p>お住まいのことで気になることがありましたら、どんな小さなことでもお気軽にご相談ください。</p>
+<p>これまでの経験の中で、無理な営業や不要な工事提案を数多く見てきました。しかし絆建装では、そのような営業は一切行いません。</p>
+<p>お客様に安心して任せていただける会社であり続けるために、職人と共に一つ一つの仕事に真剣に向き合ってまいります。関西を中心に、地域の皆様に信頼していただける会社を目指してまいります。</p>
+<p>今後とも絆建装株式会社をどうぞよろしくお願いいたします。</p>
+</div>
+<div class="pt-6 md:pt-8 border-t border-white/10 text-white">
+<p class="font-serif text-2xl md:text-3xl font-bold tracking-widest">代表取締役 前田 洋</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" class="py-24 bg-[#111111] scroll-mt-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-white tracking-widest uppercase">工事内容</h2>
+<div class="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24 text-left">
+<div class="bg-[#0A0A0A] p-10 rounded-3xl border border-white/5 transition-all hover:border-[#D4AF37]/50">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/6kq9eD6Lqp/s-1408x768_v-fms_webp_270e38bf-0a08-4e1e-8338-36502a28e35e.png" class="w-full h-36 object-cover rounded-2xl mb-6">
+<i data-lucide="paint-bucket" class="w-12 h-12 text-[#D4AF37] mb-8"></i>
+<h3 class="text-xl font-bold text-white mb-4 font-serif">外壁塗装工事</h3>
+<p class="text-gray-400 text-xs">熟練の職人が三度塗りを徹底。建物の寿命を最大限に延ばします。</p>
+</div>
+<div class="bg-[#0A0A0A] p-10 rounded-3xl border border-white/5 transition-all hover:border-[#D4AF37]/50">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/6kq9eD6Lqp/s-1408x768_v-fms_webp_08127b50-7f1f-4a61-8010-16a8b52b68da.png" class="w-full h-36 object-cover rounded-2xl mb-6">
+<i data-lucide="droplets" class="w-12 h-12 text-[#D4AF37] mb-8"></i>
+<h3 class="text-xl font-bold text-white mb-4 font-serif">防水工事</h3>
+<p class="text-gray-400 text-xs">雨漏りから建物を守る専門技術。屋上やベランダに最適な工法を提案。</p>
+</div>
+<div class="bg-[#0A0A0A] p-10 rounded-3xl border border-white/5 transition-all hover:border-[#D4AF37]/50">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/6kq9eD6Lqp/s-1408x768_v-fms_webp_dc224adf-c0c4-4488-a1b8-da19b36b7357.png" class="w-full h-36 object-cover rounded-2xl mb-6">
+<i data-lucide="flame" class="w-12 h-12 text-[#D4AF37] mb-8"></i>
+<h3 class="text-xl font-bold text-white mb-4 font-serif">給湯器取り換え</h3>
+<p class="text-gray-400 text-xs">突然の故障にもスピーディに対応。省エネ機種への交換も承ります。</p>
+</div>
+<div class="bg-[#0A0A0A] p-10 rounded-3xl border border-white/5 transition-all hover:border-[#D4AF37]/50">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/6kq9eD6Lqp/s-1408x768_v-fms_webp_97a9583c-2b6c-415f-8666-de08464c751c.png" class="w-full h-36 object-cover rounded-2xl mb-6">
+<i data-lucide="bath" class="w-12 h-12 text-[#D4AF37] mb-8"></i>
+<h3 class="text-xl font-bold text-white mb-4 font-serif">水回り工事</h3>
+<p class="text-gray-400 text-xs">キッチン・バス・トイレリフォーム。使いやすさと美しさを両立。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="works" class="py-24 bg-[#0A0A0A] scroll-mt-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4 tracking-widest uppercase">施工事例</h2>
+<div class="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-24">
+<div class="bg-[#111111] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl flex flex-col text-left">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq151zGq7/s-1200x676_v-fms_webp_efe15bab-9f5d-43e2-88aa-5fe0bcc76998.jpg" class="w-full h-48 object-cover">
+<div class="p-10 space-y-6 flex-1 flex flex-col">
+<h3 class="text-3xl font-bold text-white font-serif">兵庫県　O様邸</h3>
+<p class="text-[#D4AF37] text-sm font-bold">内容：外壁塗装・防水工事</p>
+<div class="bg-black/50 p-6 rounded-2xl border-l-4 border-[#D4AF37] flex-1 flex items-center">
+<p class="text-gray-300 text-sm italic font-light leading-relaxed">「見積りから前田代表が直接来て下さり、説明が丁寧で安心できました。仕上がりも新築のようで感動しています。」</p>
+</div>
+</div>
+</div>
+<div class="bg-[#111111] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl flex flex-col text-left">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq151zGq7/s-1200x900_v-fms_webp_02b6690e-e116-4a30-893a-d77d624af788.jpg" class="w-full h-48 object-cover">
+<div class="p-10 space-y-6 flex-1 flex flex-col">
+<h3 class="text-3xl font-bold text-white font-serif">大阪府　M様邸</h3>
+<p class="text-[#D4AF37] text-sm font-bold">内容：水回り工事</p>
+<div class="bg-black/50 p-6 rounded-2xl border-l-4 border-[#D4AF37] flex-1 flex items-center">
+<p class="text-gray-300 text-sm italic font-light leading-relaxed">「見積りから工事までがスピーディーで、仕上がりも満足しています。」</p>
+</div>
+</div>
+</div>
+<div class="bg-[#111111] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl flex flex-col text-left">
+<img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq151zGq7/s-750x750_v-fs_webp_f9da9f7e-56ea-4278-888f-f91287277b0d.jpg" class="w-full h-48 object-cover">
+<div class="p-10 space-y-6 flex-1 flex flex-col">
+<h3 class="text-3xl font-bold text-white font-serif">奈良県　S様邸</h3>
+<p class="text-[#D4AF37] text-sm font-bold">内容：外壁塗装・屋根塗装</p>
+<div class="bg-black/50 p-6 rounded-2xl border-l-4 border-[#D4AF37] flex-1 flex items-center">
+<p class="text-gray-300 text-sm italic font-light leading-relaxed">「職人さんの対応がとても良く、工事中も毎日進捗を教えていただき助かりました。」</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-12 text-left">
+<div class="bg-black/40 p-10 rounded-[2rem] border border-white/5 space-y-8 w-full max-w-2xl mx-auto">
+<h3 class="text-3xl font-serif font-bold text-[#D4AF37] tracking-widest">▷ 工事の流れ</h3>
+<ul class="space-y-7 text-sm">
+<li class="bg-[#111111] p-4 rounded-xl border-l-4 border-[#D4AF37] font-bold text-white">
+<span class="text-xl md:text-2xl font-serif">１．事前調査・現地調査<span class="text-[#D4AF37] font-extrabold text-base align-middle">（無料）</span></span>
+<div class="mt-2 text-xs md:text-sm text-gray-400 font-normal leading-relaxed">
+まずはお電話またはお問い合わせフォームより、お気軽にご相談ください。<br>
+お客様のご要望や建物の状態を丁寧にお伺いしたうえで、専門スタッフが現地へ赴き、詳細な調査を実施いたします。<br>
+建物の劣化状況や周辺環境、施工条件を総合的に判断し、品質と耐久性を重視した最適な施工プランをご提案いたします。
+</div>
+</li>
+<li class="bg-[#111111] p-4 rounded-xl border-l-4 border-[#D4AF37] font-bold text-white">
+<span class="text-xl md:text-2xl font-serif">２．詳細なお見積りと打ち合わせ<span class="text-[#D4AF37] font-extrabold text-base align-middle">（無料）</span></span>
+<div class="mt-2 text-xs md:text-sm text-gray-400 font-normal leading-relaxed">
+現地調査の結果をもとに、使用する塗料や施工内容、下地補修の必要性などを精査し、適正かつ明確なお見積りをご提示いたします。<br>
+単なる価格提示ではなく、長期的な品質維持を見据えたご提案を行い、ご納得いただけるまで丁寧にご説明いたします。
+</div>
+</li>
+<li class="bg-[#111111] p-4 rounded-xl border-l-4 border-[#D4AF37] font-bold text-white">
+<span class="text-xl md:text-2xl font-serif">３．工事計画の策定とスケジュール調整</span>
+<div class="mt-2 text-xs md:text-sm text-gray-400 font-normal leading-relaxed">
+ご契約後は、施工内容に基づいた詳細な工事計画を策定いたします。<br>
+各工程を明確にし、無駄のないスケジュールと徹底した進捗管理により、品質と効率を両立した施工を実現いたします。<br>
+事前に工事全体の流れをご説明し、安心してお任せいただける体制を整えます。
+</div>
+</li>
+<li class="bg-[#111111] p-4 rounded-xl border-l-4 border-[#D4AF37] font-bold text-white">
+<span class="text-xl md:text-2xl font-serif">４．工事開始と施工作業</span>
+<div class="mt-2 text-xs md:text-sm text-gray-400 font-normal leading-relaxed">
+工事開始前には、安全管理および近鄰への配慮を徹底し、周辺環境への影響を最小限に抑えます。<br>
+施工は、豊富な経験と技術を持つ職人が責任を持って担当し、細部に至るまで妥協のない丁寧な作業を行います。<br>
+常に高い品質基準を維持し、長く安心していただける仕上がりを追求いたします。
+</div>
+</li>
+<li class="bg-[#111111] p-4 rounded-xl border-l-4 border-[#D4AF37] font-bold text-white">
+<span class="text-xl md:text-2xl font-serif">５．仕上げ検査と引き渡し</span>
+<div class="mt-2 text-xs md:text-sm text-gray-400 font-normal leading-relaxed">
+施工完了後は、厳格な最終検査を実施し、細部まで品質を確認いたします。<br>
+その後、お客様にもご確認いただき、ご納得いただいたうえでお引き渡しとなります。
+</div>
+</li>
+</ul>
+<div class="mt-12 bg-black/60 border border-[#D4AF37]/40 rounded-[2rem] p-8 text-center shadow-xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+<h4 class="text-lg md:text-xl font-serif font-bold text-[#D4AF37] mb-6 tracking-widest">【当社の施工ポリシー】</h4>
+<div class="space-y-4 text-gray-200 leading-loose text-xs md:text-sm">
+<p>当社では、ご相談から施工、アフターサポートに至るまで、一貫した責任体制のもと対応しております。</p>
+<p>「確かな品質」「明確なご提案」「誠実な対応」を徹底し、お客様にとって安心して任せられるパートナーであり続けることをお約束いたします。</p>
+<p>大切な資産である建物の価値を守り、さらに高める施工を、責任をもってご提供いたします。</p>
+</div>
+</div>
+</div>
+<div class="bg-black/40 p-10 rounded-[2rem] border border-white/5 space-y-8 w-full max-w-xl mx-auto">
+<h3 class="text-3xl font-serif font-bold text-[#D4AF37] tracking-widest">▷ 外壁塗装の費用目安</h3>
+<div class="text-center mb-6">
+<p class="text-gray-400 text-xs font-light">2階建て住宅・一般的なシリコン塗料を使用した場合</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full md:w-4/5 mx-auto border-separate border-spacing-y-2 min-w-[320px] max-w-lg">
+<thead><tr><th class="text-left py-2 px-4 font-serif text-white bg-[#111111] rounded-l-lg">坪数</th><th class="text-left py-2 px-4 font-serif text-white bg-[#111111] rounded-r-lg">費用目安</th></tr></thead>
+<tbody class="arial-numbers">
+<tr><td class="py-2 px-4 text-white rounded-l-lg bg-[#222222]">20坪</td><td class="py-2 px-4 text-[#D4AF37] rounded-r-lg bg-[#222222]">約60万円～75万円</td></tr>
+<tr><td class="py-2 px-4 text-white rounded-l-lg bg-[#222222]">30坪</td><td class="py-2 px-4 text-[#D4AF37] rounded-r-lg bg-[#222222]">約80万円～100万円</td></tr>
+<tr><td class="py-2 px-4 text-white rounded-l-lg bg-[#222222]">40坪</td><td class="py-2 px-4 text-[#D4AF37] rounded-r-lg bg-[#222222]">約100万円～120万円</td></tr>
+<tr><td class="py-2 px-4 text-white rounded-l-lg bg-[#222222]">50坪</td><td class="py-2 px-4 text-[#D4AF37] rounded-r-lg bg-[#222222]">約120万円～140万円</td></tr>
+</tbody>
+</table>
+</div>
+<div class="text-center mt-4 space-y-2">
+<p class="text-gray-500 text-[10px] md:text-xs font-light">屋根塗装や付帯部（雨樋・軒天・破風など）の塗装を含める場合は別途費用が発生します。</p>
+<p class="text-gray-400 text-[10px] md:text-[11px] font-light italic">絆建装は工事完了後も徹底したアフターサービスをお約束します。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="company" class="py-24 bg-[#111111] scroll-mt-20">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-20"><h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4 tracking-widest uppercase">会社概要</h2><div class="w-24 h-1 bg-[#D4AF37] mx-auto"></div></div>
+<div class="bg-[#0A0A0A] rounded-[2rem] border border-[#D4AF37]/20 overflow-hidden shadow-2xl">
+<dl class="divide-y divide-white/5 text-sm md:text-base">
+<div class="grid md:grid-cols-3 p-8"><dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">会社名</dt><dd class="text-white md:col-span-2 font-serif text-lg">絆建装 株式会社</dd></div>
+<div class="grid md:grid-cols-3 p-8"><dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">代表者</dt><dd class="text-white md:col-span-2 font-serif text-lg">前田 洋</dd></div>
+<div class="grid md:grid-cols-3 p-8"><dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">所在地</dt><dd class="text-white md:col-span-2 font-serif text-lg">〒550-0027 大阪市西区九条1丁目15-10</dd></div>
+<div class="grid md:grid-cols-3 p-8">
+<dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">電話番号</dt>
+<dd class="text-white md:col-span-2">
+<p class="font-serif text-lg mb-1">06-6586-0266</p>
+<p class="text-[10px] text-gray-400">受付時間 9:00～19:00（日・祝を除く）</p>
+</dd>
+</div>
+<div class="grid md:grid-cols-3 p-8">
+<dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">事業内容</dt>
+<dd class="text-white md:col-span-2 text-lg font-serif">塗装工事一式 / 防水工事一式<br>内装リフォーム工事 / リフォーム住宅機器全般</dd>
+</div>
+<div class="grid md:grid-cols-3 p-8">
+<dt class="text-[#D4AF37] font-black text-xs tracking-widest uppercase">資格者</dt>
+<dd class="text-white md:col-span-2 text-lg font-serif">外壁アドバイザー / 外装劣化診断士</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-24 bg-[#0A0A0A] scroll-mt-20">
+<div class="max-w-5xl mx-auto px-6 text-left">
+<div class="bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] rounded-[3rem] p-10 md:p-20 border border-[#D4AF37]/30 shadow-2xl">
+<h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-14 tracking-widest text-center">お問い合わせ</h2>
+<form class="space-y-8 text-white">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2"><label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お名前 *</label><input required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
+<div class="space-y-2"><label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">電話番号 *</label><input type="tel" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
+</div>
+<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">メールアドレス *</label><input type="email" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">都道府県</label>
+<div class="relative"><select class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8"><option selected disabled hidden>選択してください</option><option>大阪府</option><option>京都府</option><option>兵庫県</option><option>滋賀県</option><option>奈良県</option><option>和歌山県</option><option>その他</option></select><span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span></div>
+</div>
+<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">希望連絡方法</label><div class="flex gap-4 py-3"><label><input type="radio" name="m" value="e"> メール</label><label><input type="radio" name="m" value="p"> 電話</label></div></div>
+<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">年代</label>
+<div class="relative"><select class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8"><option selected disabled hidden>選択してください</option><option>20代</option><option>30代</option><option>40代</option><option>50代</option><option>60代</option><option>70代</option><option>その他</option></select><span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span></div>
+</div>
+</div>
+<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お問い合わせ内容</label><textarea rows="4" class="w-full bg-transparent border border-white/20 p-3 outline-none focus:border-[#D4AF37] rounded-lg"></textarea></div>
+<div class="flex justify-center pt-4">
+<button type="submit" class="btn-contact w-full max-w-xs py-4 text-base"><span>送信する</span></button>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<script>
+const m = document.getElementById('menuBtn');
+const n = document.getElementById('mobileMenu');
+function toggleMenu() { n.classList.toggle('hidden'); }
+m.addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+
+document.addEventListener('DOMContentLoaded', function () {
+document.querySelectorAll('a.scroll-link').forEach(function (link) {
+link.addEventListener('click', function (e) {
+const href = link.getAttribute('href');
+if (!href || !href.startsWith('#')) return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (!target) return;
+      const headerH = document.querySelector('header')
+        ? document.querySelector('header').offsetHeight
+        : 80;
+      const top = target.getBoundingClientRect().top
+        + window.pageYOffset
+        - headerH;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+
+const customImgBtn = document.getElementById('customMenuBtnImg');
+const customMenuWindow = document.getElementById('customMenuWindow');
+
+function toggleCustomMenuWindow() {
+  if (customMenuWindow.classList.contains('hidden')) {
+    customMenuWindow.classList.remove('hidden');
+  } else {
+    customMenuWindow.classList.add('hidden');
+  }
+}
+window.addEventListener('resize', function () {
+  customMenuWindow.classList.add('hidden');
+});
+
+customImgBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  toggleCustomMenuWindow();
+});
+
+customMenuWindow.addEventListener('click', function(e) {
+  if (e.target === this) {
+    toggleCustomMenuWindow();
+  }
+});
+</script>
+</body>
+</html>
