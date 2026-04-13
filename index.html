@@ -404,43 +404,39 @@ document.querySelectorAll('a.scroll-link').forEach(function (link) {
 link.addEventListener('click', function (e) {
 const href = link.getAttribute('href');
 if (!href || !href.startsWith('#')) return;
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (!target) return;
-      const headerH = document.querySelector('header')
-        ? document.querySelector('header').offsetHeight
-        : 80;
-      const top = target.getBoundingClientRect().top
-        + window.pageYOffset
-        - headerH;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    });
-  });
+e.preventDefault();
+const target = document.querySelector(href);
+if (!target) return;
+const headerH = document.querySelector('header')
+? document.querySelector('header').offsetHeight
+: 80;
+const top = target.getBoundingClientRect().top
++ window.pageYOffset
+- headerH;
+window.scrollTo({ top: top, behavior: 'smooth' });
 });
-
+});
+});
 const customImgBtn = document.getElementById('customMenuBtnImg');
 const customMenuWindow = document.getElementById('customMenuWindow');
-
 function toggleCustomMenuWindow() {
-  if (customMenuWindow.classList.contains('hidden')) {
-    customMenuWindow.classList.remove('hidden');
-  } else {
-    customMenuWindow.classList.add('hidden');
-  }
+if (customMenuWindow.classList.contains('hidden')) {
+customMenuWindow.classList.remove('hidden');
+} else {
+customMenuWindow.classList.add('hidden');
+}
 }
 window.addEventListener('resize', function () {
-  customMenuWindow.classList.add('hidden');
+customMenuWindow.classList.add('hidden');
 });
-
 customImgBtn.addEventListener('click', function(e) {
-  e.stopPropagation();
-  toggleCustomMenuWindow();
+e.stopPropagation();
+toggleCustomMenuWindow();
 });
-
 customMenuWindow.addEventListener('click', function(e) {
-  if (e.target === this) {
-    toggleCustomMenuWindow();
-  }
+if (e.target === this) {
+toggleCustomMenuWindow();
+}
 });
 </script>
 </body>
