@@ -366,22 +366,66 @@ animation: fade-in .18s;
 <div class="max-w-5xl mx-auto px-6 text-left">
 <div class="bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] rounded-[3rem] p-10 md:p-20 border border-[#D4AF37]/30 shadow-2xl">
 <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-14 tracking-widest text-center">お問い合わせ</h2>
-<form class="space-y-8 text-white">
+<form action="https://ssgform.com/s/udP5tEJhNZEY" method="post" class="space-y-8 text-white">
 <div class="grid md:grid-cols-2 gap-8">
-<div class="space-y-2"><label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お名前 *</label><input required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
-<div class="space-y-2"><label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">電話番号 *</label><input type="tel" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
+<div class="space-y-2">
+<label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お名前 *</label>
+<input name="お名前" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]">
 </div>
-<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">メールアドレス *</label><input type="email" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]"></div>
+<div class="space-y-2">
+<label class="text-xs md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">電話番号 *</label>
+<input name="電話番号" type="tel" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]">
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">メールアドレス *</label>
+<input name="メールアドレス" type="email" required class="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg outline-none focus:border-[#D4AF37]">
+</div>
 <div class="grid md:grid-cols-3 gap-8">
-<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">都道府県</label>
-<div class="relative"><select class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8"><option selected disabled hidden>選択してください</option><option>大阪府</option><option>京都府</option><option>兵庫県</option><option>滋賀県</option><option>奈良県</option><option>和歌山県</option><option>その他</option></select><span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span></div>
+<div class="space-y-2">
+<label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">都道府県</label>
+<div class="relative">
+<select name="都道府県" class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8">
+<option selected disabled hidden>選択してください</option>
+<option>大阪府</option>
+<option>京都府</option>
+<option>兵庫県</option>
+<option>滋賀県</option>
+<option>奈良県</option>
+<option>和歌山県</option>
+<option>その他</option>
+</select>
+<span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span>
 </div>
-<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">希望連絡方法</label><div class="flex gap-4 py-3"><label><input type="radio" name="m" value="e"> メール</label><label><input type="radio" name="m" value="p"> 電話</label></div></div>
-<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">年代</label>
-<div class="relative"><select class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8"><option selected disabled hidden>選択してください</option><option>20代</option><option>30代</option><option>40代</option><option>50代</option><option>60代</option><option>70代</option><option>その他</option></select><span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span></div>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">希望連絡方法</label>
+<div class="flex gap-4 py-3">
+<label><input type="radio" name="希望連絡方法" value="メール"> メール</label>
+<label><input type="radio" name="希望連絡方法" value="電話"> 電話</label>
+</div>
+</div>      
+<div class="space-y-2">
+<label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">年代</label>
+<div class="relative">
+<select name="年代" class="w-full bg-black border-b border-white/20 py-3 outline-none focus:border-[#D4AF37] appearance-none pr-8">
+<option selected disabled hidden>選択してください</option>
+<option>20代</option>
+<option>30代</option>
+<option>40代</option>
+<option>50代</option>
+<option>60代</option>
+<option>70代</option>
+<option>その他</option>
+</select>
+<span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-[#D4AF37]">▼</span>
 </div>
 </div>
-<div class="space-y-2"><label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お問い合わせ内容</label><textarea rows="4" class="w-full bg-transparent border border-white/20 p-3 outline-none focus:border-[#D4AF37] rounded-lg"></textarea></div>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] md:text-sm font-bold text-[#D4AF37] uppercase tracking-widest">お問い合わせ内容</label>
+<textarea name="内容" rows="4" class="w-full bg-transparent border border-white/20 p-3 outline-none focus:border-[#D4AF37] rounded-lg"></textarea>
+</div>
 <div class="flex justify-center pt-4">
 <button type="submit" class="btn-contact w-full max-w-xs py-4 text-base"><span>送信する</span></button>
 </div>
@@ -389,6 +433,7 @@ animation: fade-in .18s;
 </div>
 </div>
 </section>
+
 </section>
 <div class="w-full flex justify-center py-10 bg-[#0A0A0A]">
 <a target="_blank" href="https://rehome-navi.com/shops/9661"><img alt="日本最大級のリフォーム会社紹介サイト リショップナビ" src="https://rehome-navi.com/images/banner/bnr_23460.png" /></a>
